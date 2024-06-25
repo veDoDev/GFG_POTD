@@ -41,9 +41,7 @@ class Solution {
         int row = mat[0].length;
 
         if (k > row)
-        {
             k = k % row;
-        }
 
         for (int i = 0; i < mat.length; i++)
         {
@@ -52,9 +50,8 @@ class Solution {
                 int f = mat[i][0];
                 
                 for (int x = 0; x < mat[i].length - 1; x++)
-                {
                     mat[i][x] = mat[i][x + 1];
-                }
+                
                 mat[i][mat[i].length - 1] = f;
             }
         }
